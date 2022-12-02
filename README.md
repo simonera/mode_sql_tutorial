@@ -1,10 +1,6 @@
 # Mode SQL tutorial
 Here I save the SQL queries from the [Mode tutorial](https://mode.com/sql-tutorial/).
 
-Table of contents:
-1. [Basic SQL](https://github.com/simonera/mode_sql_tutorial/README.md#basic-sql)
-2. Intermediate SQL
-3. Advanved SQL
 ## Basic SQL
 
 ### SELECT
