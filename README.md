@@ -54,6 +54,7 @@ WHERE
 ```
 
 Comparison operators on numerical data
+
 | Equal to	| = |
 | Not equal to	| <> or != |
 |Greater than	|>|
