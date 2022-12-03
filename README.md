@@ -35,7 +35,10 @@ FROM
 
 ### LIMIT
 ```
-SELECT *
-  FROM tutorial.us_housing_units
- LIMIT 100
+SELECT
+  *
+FROM
+  tutorial.us_housing_units
+LIMIT
+  15
 ```
