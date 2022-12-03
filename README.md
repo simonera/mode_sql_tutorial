@@ -61,5 +61,29 @@ Comparison operators on numerical data
 | Not equal to	| <> or != |
 | Greater than	| > |
 | Less than	| < |
-|Greater than or equal to	| >= |
+| Greater than or equal to | >= |
 | Less than or equal to	| <= |
+
+Practice problem 1
+```
+SELECT
+  *
+FROM
+  tutorial.us_housing_units
+WHERE
+  west > 50
+```
+
+Answer: yes, 3 times. 
+
+Practice problem 2
+```
+SELECT
+  *
+FROM
+  tutorial.us_housing_units
+WHERE
+  south <= 20
+```
+
+Answer: yes, 4 times. 
