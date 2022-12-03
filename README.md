@@ -155,3 +155,6 @@ FROM
 WHERE
   year >= 2000
 ```
+
+### [Logical Operators](https://mode.com/sql-tutorial/sql-logical-operators/)
+
