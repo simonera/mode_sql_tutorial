@@ -64,6 +64,10 @@ Comparison operators on numerical data
 | Greater than or equal to | >= |
 | Less than or equal to	| <= |
 
+For non-numerical data, use single quotes: ` WHERE month_name != 'January'` 
+
+Greater/less operators (>, <, >=, or <=) sort by alphabetic order: `WHERE month_name > 'J'`
+
 #### Practice problem 1
 ```
 SELECT
@@ -87,3 +91,37 @@ WHERE
 ```
 
 Answer: yes, 4 times. 
+
+#### Practice problem 3
+```
+SELECT
+  *
+FROM
+  tutorial.us_housing_units
+WHERE
+  month_name = 'February'
+```
+
+#### Practice problem 4
+```
+SELECT
+  *
+FROM
+  tutorial.us_housing_units
+WHERE
+  month_name < 'o'
+```
+
+#### Practice problem 5
+```
+SELECT
+  year,
+  month,
+  south,
+  west,
+  midwest,
+  northeast
+  south + west + midwest + northeast AS usa_total
+FROM
+  tutorial.us_housing_units
+```
