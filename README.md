@@ -6,6 +6,9 @@ Here I save the SQL queries from the [Mode tutorial](https://mode.com/sql-tutori
 ### [SELECT](https://mode.com/sql-tutorial/sql-select-statement/)
 
 #### Practice problem 1
+
+Write a query to select all of the columns in the `tutorial.us_housing_units` table without using `*`.
+
 ```
 SELECT
   year,
@@ -20,6 +23,9 @@ FROM
 ```
 
 #### Practice problem 2
+
+Write a query to select all of the columns in `tutorial.us_housing_units` and rename them so that their first letters are capitalized.
+
 ```
 SELECT
   year AS "Year",
@@ -34,6 +40,9 @@ FROM
 ```
 
 ### [LIMIT](https://mode.com/sql-tutorial/sql-limit/)
+
+Write a query that uses the `LIMIT` command to restrict the result set to only 15 rows.
+
 ```
 SELECT
   *
@@ -69,6 +78,9 @@ For non-numerical data, use single quotes: ` WHERE month_name != 'January'`
 Greater/less operators (>, <, >=, or <=) sort by alphabetic order: `WHERE month_name > 'J'`
 
 #### Practice problem 1
+
+Did the West Region ever produce more than 50,000 housing units in one month?
+
 ```
 SELECT
   *
@@ -81,6 +93,9 @@ WHERE
 Answer: yes, 3 times. 
 
 #### Practice problem 2
+
+Did the South Region ever produce 20,000 or fewer housing units in one month?
+
 ```
 SELECT
   *
@@ -93,6 +108,9 @@ WHERE
 Answer: yes, 4 times. 
 
 #### Practice problem 3
+
+Write a query that only shows rows for which the month name is February.
+
 ```
 SELECT
   *
@@ -103,6 +121,9 @@ WHERE
 ```
 
 #### Practice problem 4
+
+Write a query that only shows rows for which the `month_name` starts with the letter "N" or an earlier letter in the alphabet.
+
 ```
 SELECT
   *
@@ -113,6 +134,9 @@ WHERE
 ```
 
 #### Practice problem 5
+
+Write a query that calculates the sum of all four regions in a separate column.
+
 ```
 SELECT
   year,
@@ -127,6 +151,9 @@ FROM
 ```
 
 #### Practice problem 6
+
+Write a query that returns all rows for which more units were produced in the West region than in the Midwest and Northeast combined.
+
 ```
 SELECT
   year,
@@ -142,6 +169,9 @@ WHERE
 ```
 
 #### Practice problem 7
+
+Write a query that calculates the percentage of all houses completed in the United States represented by each region. Only return results from the year 2000 and later.
+
 ```
 SELECT
   year,
