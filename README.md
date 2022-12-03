@@ -32,3 +32,10 @@ SELECT
 FROM
   tutorial.us_housing_units
 ```
+
+### LIMIT
+```
+SELECT *
+  FROM tutorial.us_housing_units
+ LIMIT 100
+```
