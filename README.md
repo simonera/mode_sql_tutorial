@@ -3,7 +3,7 @@ Here I save the SQL queries from the [Mode tutorial](https://mode.com/sql-tutori
 
 ## Basic SQL
 
-### SELECT
+### [SELECT](https://mode.com/sql-tutorial/sql-select-statement/)
 
 Practice problem 1
 ```
@@ -33,7 +33,7 @@ FROM
   tutorial.us_housing_units
 ```
 
-### LIMIT
+### [LIMIT](https://mode.com/sql-tutorial/sql-limit/)
 ```
 SELECT
   *
@@ -41,4 +41,9 @@ FROM
   tutorial.us_housing_units
 LIMIT
   15
+```
+
+### [WHERE](https://mode.com/sql-tutorial/sql-where/)
+```
+
 ```
