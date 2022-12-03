@@ -5,7 +5,7 @@ Here I save the SQL queries from the [Mode tutorial](https://mode.com/sql-tutori
 
 ### [SELECT](https://mode.com/sql-tutorial/sql-select-statement/)
 
-Practice problem 1
+#### Practice problem 1
 ```
 SELECT
   year,
@@ -19,7 +19,7 @@ FROM
   tutorial.us_housing_units
 ```
 
-Practice problem 2
+#### Practice problem 2
 ```
 SELECT
   year AS "Year",
@@ -64,7 +64,7 @@ Comparison operators on numerical data
 | Greater than or equal to | >= |
 | Less than or equal to	| <= |
 
-Practice problem 1
+#### Practice problem 1
 ```
 SELECT
   *
@@ -76,7 +76,7 @@ WHERE
 
 Answer: yes, 3 times. 
 
-Practice problem 2
+#### Practice problem 2
 ```
 SELECT
   *
