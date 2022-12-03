@@ -75,7 +75,7 @@ WHERE
 
 For non-numerical data, use single quotes: ` WHERE month_name != 'January'` 
 
-Greater/less operators (>, <, >=, or <=) sort by alphabetic order: `WHERE month_name > 'J'`
+Greater-than and less-than operators (`>`, `<`, `>=`, or `<=`) sort by alphabetic order: `WHERE month_name > 'J'`
 
 #### Practice problem 1
 
