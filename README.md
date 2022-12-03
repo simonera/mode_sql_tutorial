@@ -55,6 +55,8 @@ WHERE
 
 Comparison operators on numerical data
 
+| Comparison | Operator |
+| ----------- | ----------- |
 | Equal to	| = |
 | Not equal to	| <> or != |
 | Greater than	| > |
