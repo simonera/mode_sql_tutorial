@@ -62,7 +62,7 @@ WHERE
   month = 1
 ```
 
-Comparison operators on numerical data
+### [Comparison Operators](https://mode.com/sql-tutorial/sql-operators/)
 
 | Comparison | Operator |
 | ----------- | ----------- |
