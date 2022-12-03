@@ -125,3 +125,33 @@ SELECT
 FROM
   tutorial.us_housing_units
 ```
+
+#### Practice problem 6
+```
+SELECT
+  year,
+  month,
+  south,
+  west,
+  midwest,
+  northeast
+FROM
+  tutorial.us_housing_units
+WHERE
+  west > (midwest + northeast)
+```
+
+#### Practice problem 7
+```
+SELECT
+  year,
+  month,
+  south / (south + west + midwest + northeast) * 100 AS perc_south,
+  west / (south + west + midwest + northeast) * 100 AS perc_west,
+  midwest / (south + west + midwest + northeast) * 100 AS perc_midwest,
+  northeast / (south + west + midwest + northeast) * 100 AS perc_northeast
+FROM
+  tutorial.us_housing_units
+WHERE
+  year >= 2000
+```
