@@ -210,3 +210,15 @@ WHERE
 ```
 
 Note: "group" is between double quotes to indicate that it is a column (instead of the `GROUP` command). `%` is a wildcard, which represents any character or set of characters. 
+
+`LIKE` is case-sensitive. To ignore case, use `ILIKE`:
+
+```
+SELECT
+  *
+FROM
+  tutorial.billboard_top_100_year_end
+WHERE
+  "group" ILIKE 'snoop%'
+```
+
