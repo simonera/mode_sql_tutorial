@@ -198,3 +198,15 @@ Logical operators allow you to use multiple comparison operators in one query.
 * `OR` allows you to select rows that satisfy either of two conditions.
 * `NOT` allows you to select rows that do not match a certain condition.
 
+### [LIKE](https://mode.com/sql-tutorial/sql-like/)
+
+```
+SELECT
+  *
+FROM
+  tutorial.billboard_top_100_year_end
+WHERE
+  "group" LIKE 'Snoop%'
+```
+
+Note: "group" is between double quotes to indicate that it is a column (instead of the `GROUP` command). `%` is a wildcard, which represents any character or set of characters. 
