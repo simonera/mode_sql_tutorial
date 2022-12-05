@@ -222,3 +222,42 @@ WHERE
   "group" ILIKE 'snoop%'
 ```
 
+You can also use `_` (a single underscore) to substitute for an individual character:
+
+```
+SELECT
+  *
+FROM
+  tutorial.billboard_top_100_year_end
+WHERE
+  artist ILIKE 'dr_ke'
+```
+
+#### Practice Problem 1
+
+Write a query that returns all rows for which Ludacris was a member of the group.
+
+```
+SELECT
+  *
+FROM
+  tutorial.billboard_top_100_year_end
+WHERE
+  "group" ILIKE '%ludacris%'
+```
+
+#### Practice Problem 2
+
+Write a query that returns all rows for which the first artist listed in the group has a name that begins with "DJ".
+
+```
+SELECT
+  *
+FROM
+  tutorial.billboard_top_100_year_end
+WHERE
+  "group" LIKE 'DJ%'
+```
+
+### [IN](https://mode.com/sql-tutorial/sql-in-operator/)
+
