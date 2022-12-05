@@ -261,3 +261,31 @@ WHERE
 
 ### [IN](https://mode.com/sql-tutorial/sql-in-operator/)
 
+The following query will return results for which the `year_rank` column is equal to one of the values in the list:
+
+```
+SELECT
+  *
+FROM
+  tutorial.billboard_top_100_year_end
+WHERE
+  year_rank IN (1, 2, 3)
+```
+
+The values in the list must be separated by commas. 
+
+As with comparison operators, you can use non-numerical values, but they need to go inside single quotes:
+
+```
+SELECT
+  *
+FROM
+  tutorial.billboard_top_100_year_end
+WHERE
+  artist IN ('Taylor Swift', 'Usher', 'Ludacris')
+```
+
+#### Practice Problem
+
+Write a query that shows all of the entries for Elvis and M.C. Hammer.
+
