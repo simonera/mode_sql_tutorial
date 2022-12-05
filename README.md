@@ -289,3 +289,12 @@ WHERE
 
 Write a query that shows all of the entries for Elvis and M.C. Hammer.
 
+```
+SELECT
+  *
+FROM
+  tutorial.billboard_top_100_year_end
+WHERE
+  artist IN ('M.C. Hammer', 'Hammer', 'Elvis Presley')
+```
+
