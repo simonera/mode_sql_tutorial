@@ -330,3 +330,30 @@ WHERE
 
 ### [IS NULL](https://mode.com/sql-tutorial/sql-is-null/)
 
+`IS NULL` allows you to exclude rows with missing data:
+
+```
+SELECT
+  *
+FROM
+  tutorial.billboard_top_100_year_end
+WHERE
+  artist IS NULL
+```
+
+#### Practice Problem
+
+Write a query that shows all of the rows for which song_name is null.
+
+```
+SELECT
+  *
+FROM
+  tutorial.billboard_top_100_year_end
+WHERE
+  song_name IS NULL
+```
+
+
+
+
