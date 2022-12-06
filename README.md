@@ -654,12 +654,6 @@ ORDER BY
 Write a query that returns songs that ranked between 10 and 20 (inclusive) in 1993, 2003, or 2013. Order the results by year and rank, and leave a comment on each line of the WHERE clause to indicate what that line does
 
 ```
-/* 
-Write a query that returns songs that ranked between 10 and 20 (inclusive) 
-in 1993, 2003, or 2013. Order the results by year and rank, and leave a comment 
-on each line of the WHERE clause to indicate what that line does
-*/
-
 SELECT
   *
 FROM
