@@ -554,3 +554,26 @@ WHERE
 
 ### [ORDER BY](https://mode.com/sql-tutorial/sql-order-by/)
 
+Once you've learned how to filter data, it's time to learn how to sort data. `ORDER BY` allows you to reorder your results based on the data in one or more columns. The ascending order is the default:
+
+```
+SELECT
+  *
+FROM
+  tutorial.billboard_top_100_year_end
+ORDER BY
+  artist
+```
+
+```
+SELECT
+  *
+FROM
+  tutorial.billboard_top_100_year_end
+WHERE
+  year = 2013
+ORDER BY
+  year_rank
+```
+
+
