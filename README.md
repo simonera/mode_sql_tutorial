@@ -576,4 +576,16 @@ ORDER BY
   year_rank
 ```
 
+If you want the descending order, add `DESC`:
+
+```
+SELECT
+  *
+FROM
+  tutorial.billboard_top_100_year_end
+WHERE
+  year = 2013
+ORDER BY
+  year_rank DESC
+```
 
