@@ -617,5 +617,20 @@ ORDER BY
   year DESC, year_rank
 ```
 
+#### Practice Problem 2
+
+Write a query that returns all rows from 2010 ordered by rank, with artists ordered alphabetically for each song.
+
+```
+SELECT
+  *
+FROM
+  tutorial.billboard_top_100_year_end
+WHERE
+  year = 2010
+ORDER BY
+  year_rank, artist
+```
+
 
 
