@@ -423,3 +423,41 @@ WHERE
   AND song_name ILIKE '%love%'
 ```
 
+### [OR](https://mode.com/sql-tutorial/sql-or-operator/)
+
+`OR` allows you to select rows that satisfy either of two conditions:
+
+```
+SELECT
+  *
+FROM
+  tutorial.billboard_top_100_year_end
+WHERE
+  year_rank = 5
+  OR artist = 'Gotye'
+```
+
+You can combine AND with OR using parenthesis:
+
+```
+SELECT *
+  FROM tutorial.billboard_top_100_year_end
+ WHERE year = 2013
+   AND ("group" ILIKE '%macklemore%' OR "group" ILIKE '%timberlake%')
+```
+
+#### Practice Problem 1
+
+Write a query that returns all rows for top-10 songs that featured either Katy Perry or Bon Jovi.
+
+```
+SELECT
+  *
+FROM
+  tutorial.billboard_top_100_year_end
+WHERE
+  year_rank <= 10
+  AND ("group" ILIKE '%katy perry%' OR "group" ILIKE '%bon jovi%')
+```
+
+
