@@ -632,5 +632,41 @@ ORDER BY
   year_rank, artist
 ```
 
+You can "comment out" pieces of code by adding combinations of characters, for example: `--` (two dashes) to comment out everything to the right of them on a given line, and `/*` ... `*/` to comment across multiple lines.
 
+#### Practice Problem 3
 
+Write a query that shows all rows for which T-Pain was a group member, ordered by rank on the charts, from lowest to highest rank (from 100 to 1).
+
+```
+SELECT
+  *
+FROM
+  tutorial.billboard_top_100_year_end
+WHERE
+  "group" ILIKE '%t-pain%'
+ORDER BY
+  year_rank DESC
+```
+
+#### Practice Problem 4
+
+Write a query that returns songs that ranked between 10 and 20 (inclusive) in 1993, 2003, or 2013. Order the results by year and rank, and leave a comment on each line of the WHERE clause to indicate what that line does
+
+```
+/* 
+Write a query that returns songs that ranked between 10 and 20 (inclusive) 
+in 1993, 2003, or 2013. Order the results by year and rank, and leave a comment 
+on each line of the WHERE clause to indicate what that line does
+*/
+
+SELECT
+  *
+FROM
+  tutorial.billboard_top_100_year_end
+WHERE
+  year_rank BETWEEN 10 AND 20 -- returns songs that ranked between 10 and 20 
+  AND year IN (1993, 2003, 2013) -- returns songs from 1993, 2003, or 2013
+ORDER BY
+  year, year_rank
+```
