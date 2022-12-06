@@ -460,4 +460,16 @@ WHERE
   AND ("group" ILIKE '%katy perry%' OR "group" ILIKE '%bon jovi%')
 ```
 
+#### Practice Problem 2
 
+Write a query that returns all songs with titles that contain the word "California" in either the 1970s or 1990s.
+
+```
+SELECT
+  *
+FROM
+  tutorial.billboard_top_100_year_end
+WHERE
+  song_name ILIKE '%california%'
+  AND (year BETWEEN 1970 AND 1979 OR year BETWEEN 1990 AND 1999)
+```
