@@ -354,6 +354,29 @@ WHERE
   song_name IS NULL
 ```
 
+### [AND](https://mode.com/sql-tutorial/sql-and-operator/)
 
+`AND` allows you to select only rows that satisfy two conditions. The following query will return all rows for top-10 recordings in 2012:
 
+```
+SELECT
+  *
+FROM
+  tutorial.billboard_top_100_year_end
+WHERE
+  year = 2012
+  AND year_rank <= 10
+```
 
+You can use `AND` as many times as you want:
+
+```
+SELECT
+  *
+FROM
+  tutorial.billboard_top_100_year_end
+WHERE
+  year = 2012
+  AND year_rank <= 10
+  AND "group" ILIKE '%feat%'
+```
