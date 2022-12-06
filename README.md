@@ -298,3 +298,35 @@ WHERE
   artist IN ('M.C. Hammer', 'Hammer', 'Elvis Presley')
 ```
 
+### [BETWEEN](https://mode.com/sql-tutorial/sql-between/)
+
+`BETWEEN` is a logical operator that allows you to select only rows that are within a specific range. It has to be paired with `AND`:
+
+```
+SELECT
+  *
+FROM
+  tutorial.billboard_top_100_year_end
+WHERE
+  year_rank BETWEEN 5
+  AND 10
+```
+
+`BETWEEN` includes the range bounds (in this case, 5 and 10) that you specify.
+
+#### Practice Problem
+
+Write a query that shows all top 100 songs from January 1, 1985 through December 31, 1990.
+
+```
+SELECT
+  *
+FROM
+  tutorial.billboard_top_100_year_end
+WHERE
+  year BETWEEN 1985
+  AND 1990
+```
+
+### [IS NULL](https://mode.com/sql-tutorial/sql-is-null/)
+
