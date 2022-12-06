@@ -837,3 +837,15 @@ FROM
 
 ### [GROUP BY](https://mode.com/sql-tutorial/sql-group-by/)
 
+`COUNT`, `AVG`, and `SUM` have something in common: they all aggregate across the entire table. If you want to aggregate only part of a table, use `GROUP BY`. `GROUP BY` allows you to separate data into groups, which can be aggregated independently of one another.
+
+```
+SELECT
+  year,
+  COUNT(*) AS count
+FROM
+  tutorial.aapl_historical_stock_price
+GROUP BY
+  year
+```
+
