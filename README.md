@@ -671,3 +671,10 @@ This is for the basic SQL tutorial. Next: the intermediate level!
 
 ### [Aggregate Functions](https://mode.com/sql-tutorial/sql-aggregate-functions/)
 
+SQL is excellent at aggregating data the way you might in a pivot table in Excel. You will use aggregate functions all the time, so it's important to get comfortable with them:
+
+* `COUNT` counts how many rows are in a particular column.
+* `SUM` adds together all the values in a particular column.
+* `MIN` and `MAX` return the lowest and highest values in a particular column, respectively.
+* `AVG` calculates the average of a group of selected values.
+
