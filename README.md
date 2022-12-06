@@ -473,3 +473,17 @@ WHERE
   song_name ILIKE '%california%'
   AND (year BETWEEN 1970 AND 1979 OR year BETWEEN 1990 AND 1999)
 ```
+
+#### Practice Problem 3
+
+Write a query that lists all top-100 recordings that feature Dr. Dre before 2001 or after 2009.
+
+```
+SELECT
+  *
+FROM
+  tutorial.billboard_top_100_year_end
+WHERE
+  "group" ILIKE '%dr. dre%'
+  AND (year < 2001 OR year > 2009)
+```
