@@ -589,3 +589,33 @@ ORDER BY
   year_rank DESC
 ```
 
+#### Practice Problem 1
+
+Write a query that returns all rows from 2012, ordered by song title from Z to A.
+
+```
+SELECT
+  *
+FROM
+  tutorial.billboard_top_100_year_end
+WHERE
+  year = 2012
+ORDER BY
+  song_name DESC
+```
+
+You can also order by mutiple columns:
+
+```
+SELECT
+  *
+FROM
+  tutorial.billboard_top_100_year_end
+WHERE
+  year_rank <= 3
+ORDER BY
+  year DESC, year_rank
+```
+
+
+
