@@ -758,3 +758,67 @@ SELECT
 FROM
   tutorial.aapl_historical_stock_price
 ```
+
+### [SUM](https://mode.com/sql-tutorial/sql-sum/)
+
+`SUM` totals the values in a given column. Unlike `COUNT`, you can only use `SUM` on columns containing numerical values:
+
+```
+SELECT
+  SUM(volume)
+FROM
+  tutorial.aapl_historical_stock_price
+```
+
+`SUM` treats nulls as 0, so don't worry about them.
+
+#### Practice Problem
+
+Write a query to calculate the average opening price (hint: you will need to use both COUNT and SUM, as well as some simple arithmetic).
+
+```
+SELECT
+  SUM(OPEN) / COUNT(OPEN) AS avg_open,
+FROM
+  tutorial.aapl_historical_stock_price
+```
+
+### [MIN/MAX](https://mode.com/sql-tutorial/sql-min-max/)
+
+`MIN` and `MAX` return the lowest and highest values in a particular column. They can be used on non-numerical columns. For example, `MIN` will return the lowest number, earliest date, or non-numerical value as close alphabetically to "A" as possible:
+
+```
+SELECT
+  MIN(volume) AS min_volume,
+  MAX(volume) AS max_volume
+FROM
+  tutorial.aapl_historical_stock_price
+```
+
+#### Practice Problem 1
+
+What was Apple's lowest stock price (at the time of this data collection)?
+
+```
+SELECT
+  MIN(low) AS min_low
+FROM
+  tutorial.aapl_historical_stock_price
+```
+
+Answer: 6.36. 
+
+#### Practice Problem 2
+
+What was the highest single-day increase in Apple's share value?
+
+```
+SELECT
+  MAX(close-open) AS max_increase
+FROM
+  tutorial.aapl_historical_stock_price
+```
+Answer: 32.58.
+
+### [AVG](https://mode.com/sql-tutorial/sql-avg/)
+
