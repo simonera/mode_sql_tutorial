@@ -822,3 +822,18 @@ Answer: 32.58.
 
 ### [AVG](https://mode.com/sql-tutorial/sql-avg/)
 
+`AVG` calculates the average of a selected group of values. It's very useful, but has some limitations. First, it can only be used on numerical columns. Second, it ignores nulls completely. There are some cases in which you'll want to treat null values as 0. For these cases, you'll want to write a statement that changes the nulls to 0 (covered in a later lesson). 
+
+#### Practice Problem
+
+Write a query that calculates the average daily trade volume for Apple stock.
+
+```
+SELECT
+  AVG(volume) AS avg_volume
+FROM
+  tutorial.aapl_historical_stock_price
+```
+
+### [GROUP BY](https://mode.com/sql-tutorial/sql-group-by/)
+
