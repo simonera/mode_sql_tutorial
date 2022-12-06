@@ -343,7 +343,7 @@ WHERE
 
 #### Practice Problem
 
-Write a query that shows all of the rows for which song_name is null.
+Write a query that shows all of the rows for which `song_name` is null.
 
 ```
 SELECT
