@@ -678,3 +678,65 @@ SQL is excellent at aggregating data the way you might in a pivot table in Excel
 * `MIN` and `MAX` return the lowest and highest values in a particular column, respectively.
 * `AVG` calculates the average of a group of selected values.
 
+While arithmetic operators only perform operations across rows, aggregate functions are used to perform operations across entire columns (which could include millions of rows of data or more).
+
+### [COUNT](https://mode.com/sql-tutorial/sql-count/)
+
+#### Counting all rows
+
+```
+SELECT
+  COUNT(*)
+FROM
+  tutorial.aapl_historical_stock_price
+```
+
+#### Counting individual columns
+
+The following code will provide a count of all of rows in which the `high` column **is not null**:
+
+```
+SELECT COUNT(high)
+  FROM tutorial.aapl_historical_stock_price
+```
+
+#### Practice Problem 1
+
+Write a query to count the number of non-null rows in the low column.
+
+```
+SELECT
+  COUNT(low)
+FROM
+  tutorial.aapl_historical_stock_price
+```
+
+#### Counting non-numerical columns
+
+One nice thing about `COUNT` is that you can use it on non-numerical columns:
+
+```
+SELECT
+  COUNT(date)
+FROM
+  tutorial.aapl_historical_stock_price
+```
+
+You can also use an alias:
+
+```
+SELECT
+  COUNT(date) AS count_of_date
+FROM
+  tutorial.aapl_historical_stock_price
+```
+
+IF you must USE spaces, you will need TO USE double quotes:
+
+```
+SELECT
+  COUNT(date) AS "Count Of Date"
+FROM
+  tutorial.aapl_historical_stock_price
+```
+
