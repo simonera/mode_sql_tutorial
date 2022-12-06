@@ -526,3 +526,28 @@ WHERE
   AND "group" NOT ILIKE '%macklemore%'
 ```
 
+NOT is also frequently used to identify non-null rows, but the syntax is somewhat special—you need to include IS beforehand. Here's how that looks:
+
+```
+SELECT
+  *
+FROM
+  tutorial.billboard_top_100_year_end
+WHERE
+  year = 2013
+  AND artist IS NOT NULL
+```
+
+#### Practice Problem
+
+Write a query that returns all rows for songs that were on the charts in 2013 and do not contain the letter "a".
+
+```
+SELECT
+  *
+FROM
+  tutorial.billboard_top_100_year_end
+WHERE
+  year = 2013
+  AND song_name NOT ILIKE '%a%'
+```
