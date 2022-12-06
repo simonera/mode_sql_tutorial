@@ -499,3 +499,30 @@ WHERE
   "group" ILIKE '%dr. dre%'
   AND (year <= 2000 OR year >= 2010)
 ```
+
+### [NOT](https://mode.com/sql-tutorial/sql-not-operator/)
+
+You can put `NOT` before any conditional statement to select rows for which that statement is false:
+
+```
+SELECT
+  *
+FROM
+  tutorial.billboard_top_100_year_end
+WHERE
+  year = 2013
+  AND year_rank NOT BETWEEN 2 AND 3
+```
+
+`NOT` is commonly used with `LIKE`. Run this query and check out how Macklemore magically disappears!
+
+```
+SELECT
+  *
+FROM
+  tutorial.billboard_top_100_year_end
+WHERE
+  year = 2013
+  AND "group" NOT ILIKE '%macklemore%'
+```
+
