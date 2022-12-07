@@ -1039,3 +1039,20 @@ SELECT
 FROM
   benn.college_football_players
 ```
+
+You can also use multiple conditional statements with `AND` and `OR`:
+
+```
+SELECT
+  player_name,
+  year,
+  position,
+  CASE
+    WHEN year = 'FR'
+    AND position = 'WR' THEN 'fresh_wr'
+    ELSE NULL
+  END AS sample_case_statement
+FROM
+  benn.college_football_players
+```
+
