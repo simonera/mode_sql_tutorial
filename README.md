@@ -1070,8 +1070,19 @@ Write a query that selects all columns from `benn.college_football_players` and 
 ```
 SELECT
  *,
- CASE WHEN year = 'JR' OR year = 'SR' THEN 'yes'
+ CASE WHEN year = 'JR' OR year = 'SR' THEN player_name
  END AS jr_or_sr
+FROM
+  benn.college_football_players
+```
+
+Alternatively:
+
+```
+SELECT
+  *,
+  CASE WHEN year IN ('JR', 'SR') THEN player_name
+  END AS upperclass_player_name
 FROM
   benn.college_football_players
 ```
