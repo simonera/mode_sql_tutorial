@@ -972,7 +972,7 @@ FROM
   benn.college_football_players
 ```
 
-#### Practice Problem
+#### Practice Problem 1
 
 Write a query that includes a column that is flagged "yes" when a player is from California, and sort the results with those players first.
 
@@ -989,3 +989,53 @@ ORDER BY
   is_state_ca
 ```
 
+#### Adding multiple conditions to a CASE statement
+
+You can also define a number of outcomes in a `CASE` statement by including as many `WHEN/THEN` statements as you'd like:
+
+```
+SELECT
+  player_name,
+  weight,
+  CASE
+    WHEN weight > 250 THEN 'over 250'
+    WHEN weight > 200 THEN '201-250'
+    WHEN weight > 175 THEN '176-200'
+    ELSE '175 or under'
+  END AS weight_group
+FROM
+  benn.college_football_players
+```
+
+While the above works, it's really best practice to create statements that don't overlap:
+
+```
+SELECT
+  player_name,
+  weight,
+  CASE
+    WHEN weight > 250 THEN 'over 250'
+    WHEN weight > 200 AND weight <= 250 THEN '201-250'
+    WHEN weight > 175 AND weight <= 200 THEN '176-200'
+    ELSE '175 or under'
+  END AS weight_group
+FROM
+  benn.college_football_players
+```
+
+#### Practice Problem
+Write a query that includes players' names and a column that classifies them into four categories based on height. Keep in mind that the answer we provide is only one of many possible answers, since you could divide players' heights in many ways.
+
+```
+SELECT
+  player_name,
+  height,
+  CASE
+    WHEN height > 80 THEN 'over 80'
+    WHEN height > 75 AND height <= 80 THEN '75-80'
+    WHEN height > 70 AND height <= 75 THEN '70-75'
+    ELSE '70 or under'
+  END AS height_group
+FROM
+  benn.college_football_players
+```
