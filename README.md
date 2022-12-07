@@ -1023,7 +1023,8 @@ FROM
   benn.college_football_players
 ```
 
-#### Practice Problem
+#### Practice Problem 2
+
 Write a query that includes players' names and a column that classifies them into four categories based on height. Keep in mind that the answer we provide is only one of many possible answers, since you could divide players' heights in many ways.
 
 ```
@@ -1060,6 +1061,17 @@ A quick review of `CASE` basics:
 - The `CASE` statement always goes in the `SELECT` clause
 - `CASE` must include the following components: `WHEN`, `THEN`, and `END`. `ELSE` is optional.
 - You can make any conditional statement using any conditional operator (like `WHERE`) between `WHEN` and `THEN`. This includes stringing together multiple conditional statements using `AND` and `OR`.
+- You can include multiple `WHEN` statements, as well as an `ELSE` statement to deal with any unaddressed conditions.
 
+#### Practice Problem 3
 
-You can include multiple WHEN statements, as well as an ELSE statement to deal with any unaddressed conditions.
+Write a query that selects all columns from `benn.college_football_players` and adds an additional column that displays the player's name if that player is a junior or senior.
+
+```
+SELECT
+ *,
+ CASE WHEN year = 'JR' OR year = 'SR' THEN 'yes'
+ END AS jr_or_sr
+FROM
+  benn.college_football_players
+```
