@@ -941,3 +941,8 @@ The **order** in which you write the clauses is important. Here's the order for 
 * `GROUP BY`
 * `HAVING`
 * `ORDER BY`
+
+### [CASE](https://mode.com/sql-tutorial/sql-case/)
+
+`CASE` is SQL's way of handling if/then logic. `CASE` is followed by at least one pair of `WHEN` and `THEN` statements (SQL's equivalent of IF/THEN in Excel). 
+
