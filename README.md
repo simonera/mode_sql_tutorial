@@ -896,5 +896,20 @@ ORDER BY
   year
 ```
 
+#### Practice Problem 3
 
+Write a query that calculates the lowest and highest prices that Apple stock achieved each month.
 
+```
+SELECT
+  year, 
+  month, 
+  MIN(low) AS lowest,
+  MAX(high) AS highest
+FROM
+  tutorial.aapl_historical_stock_price
+GROUP BY
+  year, month
+ORDER BY
+  year, month
+```
