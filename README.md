@@ -880,3 +880,21 @@ ORDER BY
   year, month
 ```
 
+#### Practice Problem 2
+
+Write a query to calculate the average daily price change in Apple stock, grouped by year.
+
+```
+SELECT
+  year, 
+  AVG(close-open) AS avg_price_change
+FROM
+  tutorial.aapl_historical_stock_price
+GROUP BY
+  year
+ORDER BY
+  year
+```
+
+
+
