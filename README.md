@@ -1086,3 +1086,5 @@ SELECT
 FROM
   benn.college_football_players
 ```
+
+#### Using CASE with aggregate functions
