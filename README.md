@@ -849,3 +849,34 @@ GROUP BY
   year
 ```
 
+To group by multiple columns, add a comma:
+
+```
+SELECT
+  year,
+  month,
+  COUNT(*) AS count
+FROM
+  tutorial.aapl_historical_stock_price
+GROUP BY
+  year,
+  month
+```
+
+#### Practice Problem 1
+
+Calculate the total number of shares traded each month. Order your results chronologically.
+
+```
+SELECT
+  year,
+  month,
+  SUM(volume) AS sum_volume
+FROM
+  tutorial.aapl_historical_stock_price
+GROUP BY
+  year, month
+ORDER BY
+  year, month
+```
+
