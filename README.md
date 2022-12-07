@@ -958,3 +958,34 @@ FROM
   benn.college_football_players
 ```
 
+When the condition isn't met, the new column `is_a_senior` is empty. Do you want a "no" instead of a null? Here:
+
+```
+SELECT
+  player_name,
+  year,
+  CASE
+    WHEN year = 'SR' THEN 'yes'
+    ELSE 'no'
+  END AS is_a_senior
+FROM
+  benn.college_football_players
+```
+
+#### Practice Problem
+
+Write a query that includes a column that is flagged "yes" when a player is from California, and sort the results with those players first.
+
+```
+SELECT
+  player_name,
+  state,
+  CASE
+    WHEN state = 'CA' THEN 'yes'
+  END AS is_state_CA
+FROM
+  benn.college_football_players
+ORDER BY
+  is_state_ca
+```
+
