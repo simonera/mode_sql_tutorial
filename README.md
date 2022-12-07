@@ -913,3 +913,31 @@ GROUP BY
 ORDER BY
   year, month
 ```
+
+###[HAVING](https://mode.com/sql-tutorial/sql-having/)
+
+`HAVING` is a filter clause, similar to `WHERE`. The difference is that `WHERE` doesn't allow you to filter on aggregate columns, while `HAVING` does:
+
+```
+SELECT
+  year, month, MAX(high) AS month_high
+FROM
+  tutorial.aapl_historical_stock_price
+GROUP BY
+  year, month
+HAVING
+  MAX(high) > 400
+ORDER BY
+  year, month
+```
+
+#### Query clause order
+
+The **order** in which you write the clauses is important. Here's the order for everything you've learned so far:
+
+* `SELECT`
+* `FROM`
+* `WHERE`
+* `GROUP BY`
+* `HAVING`
+* `ORDER BY`
