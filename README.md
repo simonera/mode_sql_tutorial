@@ -1107,3 +1107,43 @@ GROUP BY
   END
 ```
 
+If you only have one condition, you could use `WHERE`, but if you want to use multiple conditions, you need `CASE`:
+
+```
+SELECT
+  CASE
+    WHEN year = 'FR' THEN 'FR'
+    WHEN year = 'SO' THEN 'SO'
+    WHEN year = 'JR' THEN 'JR'
+    WHEN year = 'SR' THEN 'SR'
+    ELSE 'No Year Data'
+  END AS year_group,
+  COUNT(1) AS count
+FROM
+  benn.college_football_players
+GROUP BY
+  year_group
+```
+
+`CASE` can be confusing, so it can be a good idea to first run it on itw own:
+
+```
+SELECT
+  CASE
+    WHEN year = 'FR' THEN 'FR'
+    WHEN year = 'SO' THEN 'SO'
+    WHEN year = 'JR' THEN 'JR'
+    WHEN year = 'SR' THEN 'SR'
+    ELSE 'No Year Data'
+  END AS year_group,
+  *
+FROM
+  benn.college_football_players
+```
+
+From there, you can replace the `*` with an aggregation and add a `GROUP BY` clause.
+
+#### Practice Problem 4
+
+Write a query that counts the number of 300lb+ players for each of the following regions: West Coast (CA, OR, WA), Texas, and Other (everywhere else).
+
