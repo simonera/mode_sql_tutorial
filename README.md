@@ -1147,3 +1147,17 @@ From there, you can replace the `*` with an aggregation and add a `GROUP BY` cla
 
 Write a query that counts the number of 300lb+ players for each of the following regions: West Coast (CA, OR, WA), Texas, and Other (everywhere else).
 
+```
+SELECT
+  CASE
+    WHEN state IN ('CA', 'OR', 'WA') THEN 'West Coast'
+    WHEN state = 'TX' THEN 'Texas'
+    ELSE 'Other'
+  END AS region,
+  COUNT(player_name)
+FROM
+  benn.college_football_players
+WHERE
+  weight >= 300
+GROUP BY region
+```
