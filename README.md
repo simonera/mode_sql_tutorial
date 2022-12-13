@@ -1180,3 +1180,48 @@ WHERE
 GROUP BY
   class
 ```
+
+#### Using CASE inside of aggregate functions
+
+In the previous examples, data was displayed vertically, but in some instances, you might want to show data horizontally. This is known as "pivoting". Let's take the following query:
+
+```
+SELECT CASE WHEN year = 'FR' THEN 'FR'
+            WHEN year = 'SO' THEN 'SO'
+            WHEN year = 'JR' THEN 'JR'
+            WHEN year = 'SR' THEN 'SR'
+            ELSE 'No Year Data' END AS year_group,
+            COUNT(1) AS count
+  FROM benn.college_football_players
+ GROUP BY 1
+```
+
+And re-orient it horizontally:
+
+```
+SELECT COUNT(CASE WHEN year = 'FR' THEN 1 ELSE NULL END) AS fr_count,
+       COUNT(CASE WHEN year = 'SO' THEN 1 ELSE NULL END) AS so_count,
+       COUNT(CASE WHEN year = 'JR' THEN 1 ELSE NULL END) AS jr_count,
+       COUNT(CASE WHEN year = 'SR' THEN 1 ELSE NULL END) AS sr_count
+  FROM benn.college_football_players
+```
+
+#### Practice Problem 6
+
+Write a query that displays the number of players in each state, with FR, SO, JR, and SR players in separate columns and another column for the total number of players. Order results such that states with the most players come first. 
+
+```
+SELECT state,
+       COUNT(CASE WHEN year = 'FR' THEN 1 ELSE NULL END) AS fr_count,
+       COUNT(CASE WHEN year = 'SO' THEN 1 ELSE NULL END) AS so_count,
+       COUNT(CASE WHEN year = 'JR' THEN 1 ELSE NULL END) AS jr_count,
+       COUNT(CASE WHEN year = 'SR' THEN 1 ELSE NULL END) AS sr_count,
+       COUNT(player_name) AS total_players
+FROM benn.college_football_players
+GROUP BY state
+ORDER BY total_players DESC
+```
+
+#### Practice Problem 7
+
+ Write a query that shows the number of players at schools with names that start with A through M, and the number at schools with names starting with N - Z. 
