@@ -1161,3 +1161,22 @@ WHERE
   weight >= 300
 GROUP BY region
 ```
+
+#### Practice Problem 5
+
+Write a query that calculates the combined weight of all underclass players (FR/SO) in California as well as the combined weight of all upperclass players (JR/SR) in California.
+
+```
+SELECT
+  CASE
+    WHEN year IN ('FR', 'SO') THEN 'underclass'
+    WHEN year IN ('JR', 'SR') THEN 'upperclass'
+  END AS class,
+  SUM(weight)
+FROM
+  benn.college_football_players
+WHERE
+  state = 'CA'
+GROUP BY
+  class
+```
