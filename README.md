@@ -1239,3 +1239,6 @@ FROM
 GROUP BY
   school_group
 ```
+
+### [DISTINCT](https://mode.com/sql-tutorial/sql-distinct/)
+
