@@ -1088,3 +1088,22 @@ FROM
 ```
 
 #### Using CASE with aggregate functions
+
+`CASE` is a little more complicated and more useful when paired with aggregate functions. For example, let's say you want to only count rows that fulfill a certain condition:
+
+```
+SELECT
+  CASE
+    WHEN year = 'FR' THEN 'FR'
+    ELSE 'Not FR'
+  END AS year_group,
+  COUNT(1) AS count
+FROM
+  benn.college_football_players
+GROUP BY
+  CASE
+    WHEN year = 'FR' THEN 'FR'
+    ELSE 'Not FR'
+  END
+```
+
