@@ -914,7 +914,7 @@ ORDER BY
   year, month
 ```
 
-###[HAVING](https://mode.com/sql-tutorial/sql-having/)
+### [HAVING](https://mode.com/sql-tutorial/sql-having/) 
 
 `HAVING` is a filter clause, similar to `WHERE`. The difference is that `WHERE` doesn't allow you to filter on aggregate columns, while `HAVING` does:
 
