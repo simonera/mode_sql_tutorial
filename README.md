@@ -17,6 +17,15 @@ In this repository, I am saving all the SQL queries from the [Mode tutorial](htt
   - [NOT](#not)
   - [ORDER BY](#order-by)
 - [Intermediate SQL](#intermediate-sql)
+  - [Aggregate Functions](#aggregate-functions)
+  - [COUNT](#count)
+  - [SUM](#sum)
+  - [MIN/MAX](#min-max)
+  - [AVG](#avg)
+  - [GROUP BY](#group-by)
+  - [HAVING](#having)
+  - [CASE](#case)
+  - [DISTINCT](#distinct)
 
 <a id="basic-sql"></a>
 ## [Basic SQL](https://mode.com/sql-tutorial/introduction-to-sql/)
@@ -701,6 +710,7 @@ This is for the basic SQL tutorial. Next: the intermediate level!
 <a id="intermediate-sql"></a>
 ## [Intermediate SQL](https://mode.com/sql-tutorial/intro-to-intermediate-sql/)
 
+<a id="aggregate-functions"></a>
 ### [Aggregate Functions](https://mode.com/sql-tutorial/sql-aggregate-functions/)
 
 SQL is excellent at aggregating data the way you might in a pivot table in Excel. You will use aggregate functions all the time, so it's important to get comfortable with them:
@@ -712,6 +722,7 @@ SQL is excellent at aggregating data the way you might in a pivot table in Excel
 
 While arithmetic operators only perform operations across rows, aggregate functions are used to perform operations across entire columns (which could include millions of rows of data or more).
 
+<a id="count"></a>
 ### [COUNT](https://mode.com/sql-tutorial/sql-count/)
 
 #### Counting all rows
@@ -791,6 +802,7 @@ FROM
   tutorial.aapl_historical_stock_price
 ```
 
+<a id="sum"></a>
 ### [SUM](https://mode.com/sql-tutorial/sql-sum/)
 
 `SUM` totals the values in a given column. Unlike `COUNT`, you can only use `SUM` on columns containing numerical values:
@@ -815,6 +827,7 @@ FROM
   tutorial.aapl_historical_stock_price
 ```
 
+<a id="min-max"></a>
 ### [MIN/MAX](https://mode.com/sql-tutorial/sql-min-max/)
 
 `MIN` and `MAX` return the lowest and highest values in a particular column. They can be used on non-numerical columns. For example, `MIN` will return the lowest number, earliest date, or non-numerical value as close alphabetically to "A" as possible:
@@ -852,6 +865,7 @@ FROM
 ```
 Answer: 32.58.
 
+<a id="avg"></a>
 ### [AVG](https://mode.com/sql-tutorial/sql-avg/)
 
 `AVG` calculates the average of a selected group of values. It's very useful, but has some limitations. First, it can only be used on numerical columns. Second, it ignores nulls completely. There are some cases in which you'll want to treat null values as 0. For these cases, you'll want to write a statement that changes the nulls to 0 (covered in a later lesson). 
@@ -867,6 +881,7 @@ FROM
   tutorial.aapl_historical_stock_price
 ```
 
+<a id="group-by"></a>
 ### [GROUP BY](https://mode.com/sql-tutorial/sql-group-by/)
 
 `COUNT`, `AVG`, and `SUM` have something in common: they all aggregate across the entire table. If you want to aggregate only part of a table, use `GROUP BY`. `GROUP BY` allows you to separate data into groups, which can be aggregated independently of one another.
@@ -946,6 +961,7 @@ ORDER BY
   year, month
 ```
 
+<a id="having"></a>
 ### [HAVING](https://mode.com/sql-tutorial/sql-having/) 
 
 `HAVING` is a filter clause, similar to `WHERE`. The difference is that `WHERE` doesn't allow you to filter on aggregate columns, while `HAVING` does:
@@ -974,6 +990,7 @@ The **order** in which you write the clauses is important. Here's the order for 
 * `HAVING`
 * `ORDER BY`
 
+<a id="case"></a>
 ### [CASE](https://mode.com/sql-tutorial/sql-case/)
 
 `CASE` is SQL's way of handling if/then logic. `CASE` is followed by at least one pair of `WHEN` and `THEN` statements (SQL's equivalent of IF/THEN in Excel). Every `CASE` statement must end with the `END` statement. The `ELSE` statement is optional, and provides a way to capture values not specified in the `WHEN`/`THEN` statements. `CASE` is easiest to understand in the context of an example:
@@ -1256,7 +1273,7 @@ ORDER BY total_players DESC
 
 #### Practice Problem 7
 
- Write a query that shows the number of players at schools with names that start with A through M, and the number at schools with names starting with N - Z. 
+Write a query that shows the number of players at schools with names that start with A through M, and the number at schools with names starting with N - Z. 
 
 ```
 SELECT
@@ -1272,5 +1289,7 @@ GROUP BY
   school_group
 ```
 
+<a id="distinct"></a>
 ### [DISTINCT](https://mode.com/sql-tutorial/sql-distinct/)
 
+To be continued. 
