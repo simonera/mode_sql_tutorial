@@ -4,6 +4,18 @@ In this repository, I am saving all the SQL queries from the [Mode tutorial](htt
 # Table of contents
 - [Basic SQL](#basic-sql)
   - [SELECT](#select)
+  - [LIMIT](#limit)
+  - [WHERE](#where)
+  - [Comparison Operators](#comparison-operators)
+  - [Logical Operators](#logical-operators)
+  - [LIKE](#like)
+  - [IN](#in)
+  - [BETWEEN](#between)
+  - [IS NULL](#is-null)
+  - [AND](#and)
+  - [OR](#or)
+  - [NOT](#not)
+  - [ORDER BY](#order-by)
 - [Intermediate SQL](#intermediate-sql)
 
 <a id="basic-sql"></a>
@@ -46,6 +58,7 @@ FROM
   tutorial.us_housing_units
 ```
 
+<a id="limit"></a>
 ### [LIMIT](https://mode.com/sql-tutorial/sql-limit/)
 
 Write a query that uses the `LIMIT` command to restrict the result set to only 15 rows.
@@ -59,6 +72,7 @@ LIMIT
   15
 ```
 
+<a id="where"></a>
 ### [WHERE](https://mode.com/sql-tutorial/sql-where/)
 ```
 SELECT
@@ -69,6 +83,7 @@ WHERE
   month = 1
 ```
 
+<a id="comparison-operators"></a>
 ### [Comparison Operators](https://mode.com/sql-tutorial/sql-operators/)
 
 | Comparison | Operator |
@@ -193,6 +208,7 @@ WHERE
   year >= 2000
 ```
 
+<a id="logical-operators"></a>
 ### [Logical Operators](https://mode.com/sql-tutorial/sql-logical-operators/)
 
 Logical operators allow you to use multiple comparison operators in one query. 
@@ -205,6 +221,7 @@ Logical operators allow you to use multiple comparison operators in one query.
 * `OR` allows you to select rows that satisfy either of two conditions.
 * `NOT` allows you to select rows that do not match a certain condition.
 
+<a id="like"></a>
 ### [LIKE](https://mode.com/sql-tutorial/sql-like/)
 
 ```
@@ -266,6 +283,7 @@ WHERE
   "group" LIKE 'DJ%'
 ```
 
+<a id="in"></a>
 ### [IN](https://mode.com/sql-tutorial/sql-in-operator/)
 
 The following query will return results for which the `year_rank` column is equal to one of the values in the list:
@@ -305,6 +323,7 @@ WHERE
   artist IN ('M.C. Hammer', 'Hammer', 'Elvis Presley')
 ```
 
+<a id="between"></a>
 ### [BETWEEN](https://mode.com/sql-tutorial/sql-between/)
 
 `BETWEEN` is a logical operator that allows you to select only rows that are within a specific range. It has to be paired with `AND`:
@@ -335,6 +354,7 @@ WHERE
   AND 1990
 ```
 
+<a id="is-null"></a>
 ### [IS NULL](https://mode.com/sql-tutorial/sql-is-null/)
 
 `IS NULL` allows you to exclude rows with missing data:
@@ -361,6 +381,7 @@ WHERE
   song_name IS NULL
 ```
 
+<a id="and"></a>
 ### [AND](https://mode.com/sql-tutorial/sql-and-operator/)
 
 `AND` allows you to select only rows that satisfy two conditions. The following query will return all rows for top-10 recordings in 2012:
@@ -430,6 +451,7 @@ WHERE
   AND song_name ILIKE '%love%'
 ```
 
+<a id="or"></a>
 ### [OR](https://mode.com/sql-tutorial/sql-or-operator/)
 
 `OR` allows you to select rows that satisfy either of two conditions:
@@ -507,6 +529,7 @@ WHERE
   AND (year <= 2000 OR year >= 2010)
 ```
 
+<a id="not"></a>
 ### [NOT](https://mode.com/sql-tutorial/sql-not-operator/)
 
 You can put `NOT` before any conditional statement to select rows for which that statement is false:
@@ -559,6 +582,7 @@ WHERE
   AND song_name NOT ILIKE '%a%'
 ```
 
+<a id="order-by"></a>
 ### [ORDER BY](https://mode.com/sql-tutorial/sql-order-by/)
 
 Once you've learned how to filter data, it's time to learn how to sort data. `ORDER BY` allows you to reorder your results based on the data in one or more columns. The ascending order is the default:
