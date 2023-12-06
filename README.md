@@ -2,9 +2,10 @@
 In this repository, I am saving all the SQL queries from the [Mode tutorial](https://mode.com/sql-tutorial/). It's a *work in progress*.
 
 # Table of contents
-- [Basic SQL](https://github.com/simonera/mode_sql_tutorial#basic-sql)
-- [Intermediate SQL](https://mode.com/sql-tutorial/intro-to-intermediate-sql/)
+- [Basic SQL](#basic-sql)
+- [Intermediate SQL](#intermediate-sql)
 
+<a id="basic-sql"></a>
 ## [Basic SQL](https://mode.com/sql-tutorial/introduction-to-sql/)
 
 ### [SELECT](https://mode.com/sql-tutorial/sql-select-statement/)
@@ -671,6 +672,7 @@ ORDER BY
 
 This is for the basic SQL tutorial. Next: the intermediate level!
 
+<a id="intermediate-sql"></a>
 ## [Intermediate SQL](https://mode.com/sql-tutorial/intro-to-intermediate-sql/)
 
 ### [Aggregate Functions](https://mode.com/sql-tutorial/sql-aggregate-functions/)
