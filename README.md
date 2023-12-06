@@ -3,11 +3,13 @@ In this repository, I am saving all the SQL queries from the [Mode tutorial](htt
 
 # Table of contents
 - [Basic SQL](#basic-sql)
+  - [SELECT](#select)
 - [Intermediate SQL](#intermediate-sql)
 
 <a id="basic-sql"></a>
 ## [Basic SQL](https://mode.com/sql-tutorial/introduction-to-sql/)
 
+<a id="select"></a>
 ### [SELECT](https://mode.com/sql-tutorial/sql-select-statement/)
 
 #### Practice problem 1
