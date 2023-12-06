@@ -1,6 +1,10 @@
 # Mode SQL tutorial
 In this repository, I am saving all the SQL queries from the [Mode tutorial](https://mode.com/sql-tutorial/). It's a *work in progress*.
 
+# Table of contents
+[Basic SQL](https://github.com/simonera/mode_sql_tutorial#basic-sql)
+[Intermediate SQL](https://mode.com/sql-tutorial/intro-to-intermediate-sql/)
+
 ## [Basic SQL](https://mode.com/sql-tutorial/introduction-to-sql/)
 
 ### [SELECT](https://mode.com/sql-tutorial/sql-select-statement/)
